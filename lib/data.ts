@@ -1,9 +1,77 @@
-import { BriefcaseBusiness, ChartNoAxesCombined, HeartPulse, Landmark, ScrollText, ShieldCheck } from 'lucide-react';
-export const services=[
-{slug:'financial-planning',title:'Financial Planning',icon:ChartNoAxesCombined,desc:'A structured view of your goals, risks and future needs.',items:['Financial needs analysis','Goal planning','Risk review','Protection planning','Long-term planning guidance','Follow-up consultation'],cta:'Start Financial Planning'},
-{slug:'retirement-planning',title:'Retirement Planning',icon:Landmark,desc:'Plan for the income and confidence you want later in life.',items:['Retirement needs review','Income planning','Retirement savings discussion','Preservation planning','Retirement readiness check'],cta:'Plan for Retirement'},
-{slug:'life-cover-protection',title:'Life Cover & Protection',icon:ShieldCheck,desc:'Understand how to protect your family, income and responsibilities.',items:['Life cover review','Disability cover discussion','Income protection needs','Family protection planning','Policy review support'],cta:'Check Your Cover Needs'},
-{slug:'investments',title:'Investments',icon:ChartNoAxesCombined,desc:'Align your investment decisions with goals, timeframes and risk appetite.',items:['Investment goal review','Risk profile discussion','Long-term growth planning','Savings planning','Portfolio discussion'],cta:'Discuss Investment Options'},
-{slug:'estate-legacy-planning',title:'Estate & Legacy Planning',icon:ScrollText,desc:'Create clarity around how your wealth and responsibilities are transferred.',items:['Estate planning discussion','Beneficiary planning','Legacy goals','Will and estate considerations','Family financial planning'],cta:'Plan Your Legacy'},
-{slug:'business-planning',title:'Business & Professional Planning',icon:BriefcaseBusiness,desc:'Structured planning for business owners, professionals and executives.',items:['Business protection discussion','Key person cover needs','Executive planning','Professional income protection','Succession planning guidance'],cta:'Request Business Planning'}];
-export const nav=[['About','/about'],['Services','/services'],['Resources','/resources'],['Contact','/contact']];
+import {
+  BriefcaseBusiness,
+  ChartNoAxesCombined,
+  Landmark,
+  ScrollText,
+  ShieldCheck,
+} from 'lucide-react';
+
+export const services = [
+  {
+    slug: 'financial-planning',
+    title: 'Financial Planning',
+    icon: ChartNoAxesCombined,
+    desc: 'A structured view of your goals, risks and future needs.',
+    image: '/images/service-financial-planning.png',
+    imageAlt: 'A financial planner reviewing a complete financial roadmap',
+    items: ['Financial needs analysis', 'Goal planning', 'Risk review', 'Protection planning', 'Long-term planning guidance', 'Follow-up consultation'],
+    cta: 'Start Financial Planning',
+  },
+  {
+    slug: 'retirement-planning',
+    title: 'Retirement Planning',
+    icon: Landmark,
+    desc: 'Plan for the income and confidence you want later in life.',
+    image: '/images/service-retirement-planning.png',
+    imageAlt: 'A mature couple reviewing their retirement plan together',
+    items: ['Retirement needs review', 'Income planning', 'Retirement savings discussion', 'Preservation planning', 'Retirement readiness check'],
+    cta: 'Plan for Retirement',
+  },
+  {
+    slug: 'life-cover-protection',
+    title: 'Life Cover & Protection',
+    icon: ShieldCheck,
+    desc: 'Understand how to protect your family, income and responsibilities.',
+    image: '/images/service-life-cover-protection.png',
+    imageAlt: 'A family sharing time together at home',
+    items: ['Life cover review', 'Disability cover discussion', 'Income protection needs', 'Family protection planning', 'Policy review support'],
+    cta: 'Check Your Cover Needs',
+  },
+  {
+    slug: 'investments',
+    title: 'Investments',
+    icon: ChartNoAxesCombined,
+    desc: 'Align your investment decisions with goals, timeframes and risk appetite.',
+    image: '/images/service-investments.png',
+    imageAlt: 'A considered long-term investment dashboard on a dark desk',
+    items: ['Investment goal review', 'Risk profile discussion', 'Long-term growth planning', 'Savings planning', 'Portfolio discussion'],
+    cta: 'Discuss Investment Options',
+  },
+  {
+    slug: 'estate-legacy-planning',
+    title: 'Estate & Legacy Planning',
+    icon: ScrollText,
+    desc: 'Create clarity around how your wealth and responsibilities are transferred.',
+    image: '/images/service-estate-legacy-planning.png',
+    imageAlt: 'Family members reviewing a legacy planning folder together',
+    items: ['Estate planning discussion', 'Beneficiary planning', 'Legacy goals', 'Will and estate considerations', 'Family financial planning'],
+    cta: 'Plan Your Legacy',
+  },
+  {
+    slug: 'business-planning',
+    title: 'Business & Professional Planning',
+    icon: BriefcaseBusiness,
+    desc: 'Structured planning for business owners, professionals and executives.',
+    image: '/images/service-business-planning.png',
+    imageAlt: 'Business leaders in a focused planning conversation',
+    items: ['Business protection discussion', 'Key person cover needs', 'Executive planning', 'Professional income protection', 'Succession planning guidance'],
+    cta: 'Request Business Planning',
+  },
+];
+
+export const nav = [
+  ['About', '/about'],
+  ['Services', '/services'],
+  ['Resources', '/resources'],
+  ['Contact', '/contact'],
+] as const;

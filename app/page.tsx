@@ -1,2 +1,47 @@
-import Image from 'next/image';import Link from 'next/link';import {ArrowRight,LockKeyhole,ShieldCheck,UserRoundCheck,Waypoints} from 'lucide-react';import {services} from '@/lib/data';
-export default function Home(){return <main><div className="hero"><div className="hero-copy"><div className="eyebrow">Plan today. Protect tomorrow.</div><h1>Clarity for the life you’re building.</h1><p>Professional financial planning that helps individuals, families and professionals make informed decisions about protection, retirement, investments and the legacy they want to leave.</p><div className="hero-actions"><Link className="btn" href="/contact">Book a consultation <ArrowRight size={17}/></Link><Link className="btn ghost" href="/qualification-questionnaire">Check if you qualify</Link></div></div><div className="hero-image"><Image src="/images/brand-9.png" alt="A financial planning conversation with Hendrik van Niekerk" fill priority sizes="(max-width:900px) 100vw, 50vw"/></div></div><div className="trust"><div className="wrap trust-grid">{[[ShieldCheck,'Authorised financial services provider'],[UserRoundCheck,'Executive financial planner'],[Waypoints,'Client-focused planning'],[LockKeyhole,'Secure enquiry process']].map(([Icon,t]:any)=><div className="trust-item" key={t}><Icon size={21}/>{t}</div>)}</div></div><section><div className="wrap split"><div className="portrait"><Image src="/images/brand-6.png" alt="Hendrik van Niekerk, Executive Financial Planner" fill sizes="(max-width:900px) 100vw, 50vw"/></div><div><div className="eyebrow">Meet your planner</div><h2>A clear plan begins with a real conversation.</h2><p className="quote">“Financial planning should bring perspective to complexity and confidence to your next decision.”</p><p>Hendrik van Niekerk is an Executive Financial Planner at Legacy Planning Institute. With qualifications in commerce, law and compliance management, he brings a professional and structured approach to every financial planning conversation.</p><div className="stats"><div className="stat"><strong>BCom Law</strong><span>Commercial insight</span></div><div className="stat"><strong>Compliance</strong><span>Structured guidance</span></div><div className="stat"><strong>Personal</strong><span>Client-first planning</span></div></div><div style={{marginTop:38}}><Link className="btn dark" href="/about">Meet Hendrik <ArrowRight size={17}/></Link></div></div></div></section><section className="dark-section"><div className="wrap"><div className="section-head"><div><div className="eyebrow">What we help with</div><h2>One life. One connected plan.</h2></div><p>Every financial journey is different. We help you understand your options, identify gaps and take a considered next step.</p></div><div className="service-grid">{services.map((s,i)=><article className="service-card" key={s.slug}><span className="num">0{i+1}</span><s.icon size={27} color="#f36b21"/><h3>{s.title}</h3><p>{s.desc}</p><Link href={'/'+s.slug}>Explore service <ArrowRight size={15}/></Link></article>)}</div></div></section><section><div className="wrap"><div className="section-head"><div><div className="eyebrow">A thoughtful process</div><h2>From uncertainty to a clear next step.</h2></div></div><div className="process"><div className="step"><span>01 — Understand</span><h3>Start with your story</h3><p>We discuss where you are now, what matters to you and the questions you want answered.</p></div><div className="step"><span>02 — Assess</span><h3>See the full picture</h3><p>A structured needs analysis helps reveal gaps, priorities and planning opportunities.</p></div><div className="step"><span>03 — Plan</span><h3>Move forward clearly</h3><p>We help you understand suitable next steps before any recommendation is considered.</p></div></div></div></section><div className="image-band"><Image src="/images/brand-10.png" alt="Hendrik discussing a financial plan with clients" fill sizes="100vw"/><div className="overlay"/><div className="copy"><div className="eyebrow">Not sure where to begin?</div><h2>Find the planning path that may suit you.</h2><p>Answer a few short questions. Our team will review your details and contact you about an appropriate next step.</p><Link className="btn" href="/qualification-questionnaire">Check if you qualify <ArrowRight size={17}/></Link></div></div></main>}
+import Image from 'next/image';
+import Link from 'next/link';
+import { ArrowRight, LockKeyhole, ShieldCheck, UserRoundCheck, Waypoints } from 'lucide-react';
+import { services } from '@/lib/data';
+
+export default function Home() {
+  return (
+    <main>
+      <div className="hero">
+        <div className="hero-copy">
+          <div className="eyebrow">Plan today. Protect tomorrow.</div>
+          <h1>Clarity for the life you’re building.</h1>
+          <p>Professional financial planning that helps individuals, families and professionals make informed decisions about protection, retirement, investments and the legacy they want to leave.</p>
+          <div className="hero-actions"><Link className="btn" href="/contact">Book a consultation <ArrowRight size={17} /></Link><Link className="btn ghost" href="/qualification-questionnaire">Check if you qualify</Link></div>
+        </div>
+        <div className="hero-image"><Image src="/images/brand-9.png" alt="A financial planning conversation with Hendrik van Niekerk" fill priority sizes="(max-width:900px) 100vw, 50vw" /></div>
+      </div>
+
+      <div className="trust"><div className="wrap trust-grid">{[[ShieldCheck, 'Authorised financial services provider'], [UserRoundCheck, 'Executive financial planner'], [Waypoints, 'Client-focused planning'], [LockKeyhole, 'Secure enquiry process']].map(([Icon, text]: any) => <div className="trust-item" key={text}><Icon size={21} />{text}</div>)}</div></div>
+
+      <section>
+        <div className="wrap split">
+          <div className="portrait"><Image src="/images/brand-6.png" alt="Hendrik van Niekerk, Executive Financial Planner" fill sizes="(max-width:900px) 100vw, 50vw" /></div>
+          <div>
+            <div className="eyebrow">Meet your planner</div>
+            <h2>A clear plan begins with a real conversation.</h2>
+            <p className="quote">“Financial planning should bring perspective to complexity and confidence to your next decision.”</p>
+            <p>Hendrik van Niekerk is an Executive Financial Planner at Legacy Planning Institute. With qualifications in commerce, law and compliance management, he brings a professional and structured approach to every financial planning conversation.</p>
+            <div className="stats"><div className="stat"><strong>BCom Law</strong><span>Commercial insight</span></div><div className="stat"><strong>Compliance</strong><span>Structured guidance</span></div><div className="stat"><strong>Personal</strong><span>Client-first planning</span></div></div>
+            <div className="action-row"><Link className="btn dark" href="/about">Meet Hendrik <ArrowRight size={17} /></Link></div>
+          </div>
+        </div>
+      </section>
+
+      <section className="dark-section services-showcase">
+        <div className="wrap">
+          <div className="section-head"><div><div className="eyebrow">What we help with</div><h2>One life. One connected plan.</h2></div><p>Every financial journey is different. We help you understand your options, identify gaps and take a considered next step.</p></div>
+          <div className="service-grid visual-grid">{services.map((service, index) => <article className="service-card visual-service-card" key={service.slug}><Link className="service-card-image" href={`/${service.slug}`} aria-label={`Explore ${service.title}`}><Image src={service.image} alt={service.imageAlt} fill sizes="(max-width:700px) 100vw, (max-width:1000px) 50vw, 33vw" /></Link><div className="service-card-body"><div className="service-meta"><span className="num">0{index + 1}</span><service.icon size={25} /></div><h3>{service.title}</h3><p>{service.desc}</p><Link className="text-link" href={`/${service.slug}`}>Explore service <ArrowRight size={15} /></Link></div></article>)}</div>
+        </div>
+      </section>
+
+      <section><div className="wrap"><div className="section-head"><div><div className="eyebrow">A thoughtful process</div><h2>From uncertainty to a clear next step.</h2></div></div><div className="process"><div className="step"><span>01 — Understand</span><h3>Start with your story</h3><p>We discuss where you are now, what matters to you and the questions you want answered.</p></div><div className="step"><span>02 — Assess</span><h3>See the full picture</h3><p>A structured needs analysis helps reveal gaps, priorities and planning opportunities.</p></div><div className="step"><span>03 — Plan</span><h3>Move forward clearly</h3><p>We help you understand suitable next steps before any recommendation is considered.</p></div></div></div></section>
+
+      <div className="image-band"><Image src="/images/brand-10.png" alt="Hendrik discussing a financial plan with clients" fill sizes="100vw" /><div className="overlay" /><div className="copy"><div className="eyebrow">Not sure where to begin?</div><h2>Find the planning path that may suit you.</h2><p>Answer a few short questions. Our team will review your details and contact you about an appropriate next step.</p><Link className="btn" href="/qualification-questionnaire">Check if you qualify <ArrowRight size={17} /></Link></div></div>
+    </main>
+  );
+}
